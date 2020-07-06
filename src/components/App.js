@@ -6,8 +6,8 @@ import CommentList from 'components/CommentList';
 import * as actions from 'redux/actions';
 
 const App = (props) => {
-  console.log('App',props);
-  const renderButton = () => {
+
+  const renderAuthButton = () => {
     if (props.auth) {
       return (
         <button onClick={() => props.changeAuth(false)}>Sign Out</button>
@@ -28,7 +28,7 @@ const App = (props) => {
         <li>
           <Link to="/post">Post A Comment</Link>
         </li>
-        <li>{renderButton()}</li>
+        <li>{renderAuthButton()}</li>
       </ul>
     );
   }
